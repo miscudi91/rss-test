@@ -36,12 +36,12 @@
       "settings": {
         "vnext": [
 
-          { "tag":"mux01",
-            "address": "mux.01.po3ac0cs.ru",
-            "port": 29942,
+          { "tag":"vmx01",
+            "address": "vmx.01.ss-network.ru",
+            "port": 53971,
             "users": [
               {
-                "id": "5e8c4e21-949f-4953-d83e-93a4692363b4",
+                "id": "f964dbcf-e7d2-496f-d7f7-00052d621f3a",
                 "alterId": 64,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -51,13 +51,25 @@
           },
 
 
-          { "tag":"mux02",
-            "address": "mux.02.po3ac0cs.ru",
-            "port": 26055,
+          { "tag":"vmx02",
+            "address": "vmx.01.x6sillq.ru",
+            "port": 53971,
             "users": [
               {
                 "alterId": 64,
-                "id": "4b6cfa64-436c-4ab0-80fd-6a17ec131404",
+                "id": "f964dbcf-e7d2-496f-d7f7-00052d621f3a",
+                
+                "security": "auto"
+              }
+            ]
+          },
+           { "tag":"vmx03",
+            "address": "vmx.01.z0rkliq.ru",
+            "port": 53971,
+            "users": [
+              {
+                "alterId": 64,
+                "id": "f964dbcf-e7d2-496f-d7f7-00052d621f3a",
                 
                 "security": "auto"
               }
@@ -124,8 +136,9 @@
       {
         "tag":"loadbalance",
         "selector": [
-        "mux01",
-        "mux02"
+        "vmx01",
+        "vmx02",
+        "vmx03"
         ]
       }
     ],
