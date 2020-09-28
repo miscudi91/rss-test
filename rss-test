@@ -35,8 +35,8 @@
       "protocol": "vmess",
       "settings": {
         "vnext": [
-
-          { "tag":"vmx01",
+          {
+            "tag": "vmx01",
             "address": "vmx.01.ss-network.ru",
             "port": 53971,
             "users": [
@@ -49,28 +49,26 @@
               }
             ]
           },
-
-
-          { "tag":"vmx02",
+          {
+            "tag": "vmx02",
             "address": "vmx.01.x6sillq.ru",
             "port": 53971,
             "users": [
               {
                 "alterId": 64,
                 "id": "f964dbcf-e7d2-496f-d7f7-00052d621f3a",
-                
                 "security": "auto"
               }
             ]
           },
-           { "tag":"vmx03",
+          {
+            "tag": "vmx03",
             "address": "vmx.01.z0rkliq.ru",
             "port": 53971,
             "users": [
               {
                 "alterId": 64,
                 "id": "f964dbcf-e7d2-496f-d7f7-00052d621f3a",
-                
                 "security": "auto"
               }
             ]
@@ -124,21 +122,20 @@
   ],
   "stats": null,
   "api": null,
-  "dns": { 
-        "servers": [ 
-            "8.8.8.8", 
-            "localhost" 
-        ] 
-    },
+  "dns": {
+    "servers": [
+      "8.8.8.8"
+    ]
+  },
   "routing": {
-    "domainStrategy": "IPIfNonMatch",
+    "domainStrategy": "IpOnDemand",
     "balancers": [
       {
-        "tag":"loadbalance",
+        "tag": "loadbalance",
         "selector": [
-        "vmx01",
-        "vmx02",
-        "vmx03"
+          "vmx01",
+          "vmx02",
+          "vmx03"
         ]
       }
     ],
@@ -148,7 +145,6 @@
         "network": "tcp,udp",
         "balancerTag": "loadbalance"
       },
-      
       {
         "type": "field",
         "port": null,
